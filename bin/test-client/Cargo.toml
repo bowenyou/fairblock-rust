@@ -1,0 +1,12 @@
+[package]
+name = "test-client"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bip39 = "2.0.0"
+cosmos-sdk-proto = "0.23.0"
+cosmrs = { version = "0.18.0", features = ["bip32"] }
+fairblock-proto.workspace = true
+tokio = { version = "1.39.2", features = ["full"] }
+tonic = "0.12.1"

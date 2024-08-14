@@ -1,0 +1,8 @@
+syntax = "proto3";
+package fairyring.keyshare;
+
+option go_package = "github.com/Fairblock/fairyring/x/keyshare/types";
+
+message Commitments {
+  repeated string commitments = 1;
+}

@@ -1,0 +1,8 @@
+[workspace]
+resolver = "2"
+members = ["bin/test-client","crates/fairblock-proto"]
+
+default-member = ["bin/test-client"]
+
+[workspace.dependencies]
+fairblock-proto = { path = "crates/fairblock-proto/" }
