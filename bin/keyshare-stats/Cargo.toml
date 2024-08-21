@@ -1,0 +1,14 @@
+[package]
+name = "keyshare-stats"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.86"
+cosmos-sdk-proto = "0.23.0"
+cosmrs = { version = "0.18.0", features = ["bip32"] }
+fairblock-proto.workspace = true
+serde = { version = "1.0.208", features = ["derive"] }
+serde_json = "1.0.125"
+tokio = { version = "1.39.2", features = ["full"] }
+tonic = "0.12.1"
