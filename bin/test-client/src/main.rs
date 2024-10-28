@@ -13,12 +13,8 @@ use cosmrs::{
     tx::{Body, Fee, Msg, SignDoc, SignerInfo},
     Coin,
 };
-use fairblock_proto::fairyring::{
-    keyshare::{
-        MsgSendKeyshare, QueryAllValidatorSetRequest, QueryGetAuthorizedAddressRequest,
-        QueryGetValidatorSetRequest,
-    },
-    pep::QueryGetPepNonceRequest,
+use fairblock_proto::fairyring::keyshare::{
+    MsgSendKeyshare, QueryValidatorSetAllRequest, QueryValidatorSetRequest,
 };
 use tonic::transport::Channel;
 
@@ -66,7 +62,7 @@ async fn main() {
     //
     //let response = keyshare_query_client.authorized_address(request).await;
     //
-    let request = QueryGetValidatorSetRequest {
+    let request = QueryValidatorSetRequest {
         index: "fairy1zrpp7dfav7kancgse2peh3k98u9ueajwvq4w4q".to_string(),
     };
     let response = keyshare_query_client.validator_set(request).await;

@@ -1,8 +1,6 @@
 [workspace]
 resolver = "2"
-members = [ "bin/keyshare-stats","bin/test-client","crates/fairblock-proto"]
-
-default-member = ["bin/test-client"]
+members = [ "bin/keyshare-stats","bin/test-client", "bin/test-wasm","crates/fairblock-proto"]
 
 [workspace.dependencies]
 fairblock-proto = { path = "crates/fairblock-proto/" }

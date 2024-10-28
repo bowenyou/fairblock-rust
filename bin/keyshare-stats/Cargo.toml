@@ -5,9 +5,9 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.86"
-cosmos-sdk-proto = "0.23.0"
+cosmos-sdk-proto = { version = "0.23.0", features = ["grpc-transport"] }
 cosmrs = { version = "0.18.0", features = ["bip32"] }
-fairblock-proto.workspace = true
+fairblock-proto = { path = "../../crates/fairblock-proto/" }
 serde = { version = "1.0.208", features = ["derive"] }
 serde_json = "1.0.125"
 tokio = { version = "1.39.2", features = ["full"] }

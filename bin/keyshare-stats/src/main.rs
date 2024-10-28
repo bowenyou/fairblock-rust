@@ -2,7 +2,7 @@ use std::{fs::File, io::Write};
 
 use anyhow::{anyhow, Result};
 use cosmos_sdk_proto::cosmos::base::query::v1beta1::PageRequest;
-use fairblock_proto::fairyring::keyshare::QueryAllAggregatedKeyShareRequest;
+use fairblock_proto::fairyring::keyshare::QueryAggregatedKeyShareAllRequest;
 use tonic::transport::Channel;
 
 #[derive(Debug, serde::Serialize)]
@@ -47,7 +47,7 @@ async fn main() -> Result<()> {
     });
 
     loop {
-        let request = QueryAllAggregatedKeyShareRequest {
+        let request = QueryAggregatedKeyShareAllRequest {
             pagination: pagination.clone(),
         };
 
